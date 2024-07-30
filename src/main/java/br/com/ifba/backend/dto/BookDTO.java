@@ -1,12 +1,19 @@
 package br.com.ifba.backend.dto;
 
 import br.com.ifba.backend.entities.Book;
+import jakarta.validation.constraints.NotBlank;
 
 public class BookDTO {
 
     private Long id;
+
+    @NotBlank(message = "Campo obrigatório")
     private String title;
+
+    @NotBlank(message = "Campo obrigatório")
     private String author;
+
+    @NotBlank(message = "Campo obrigatório")
     private String isbn;
 
     public BookDTO() {
